@@ -44,6 +44,7 @@ if __name__ == '__main__':
     else:
         print 'hehe,nimabi!'
 '''
+'''
 #当有默认参数的时候,需要放到后面
 def foo(name,action='chifan',where='bj'):
     print name,'去',action,where
@@ -52,3 +53,108 @@ foo('gunag','zhuangbi')
 foo('wuyangyang','piaochang')
 foo('me',where='cq',action='kj')
 #me 去 gg cq
+'''
+'''
+#参数问题
+def show1(arg):
+    for item in arg:
+        print item
+
+def show2(arg1,arg2):
+        print arg1,arg2
+
+
+show1 (['batt'',''linux'])
+
+show2 ('numb1','numb2')
+
+
+#可以传多个参数,会包装成一个列表
+def show(*arg):
+    for item in arg:
+        print item
+
+show('1','2','3','4')
+#传入的参数为一个字典
+def show3(**kargs):
+    for item in kargs.items():
+        print item
+show3(name='liubz',age='22')
+
+#当传入的参数为字典时需要添加**
+def show(**kargs):
+    for item in kargs.items():
+        print item
+user_dict = {'k1':'123','k2':'234'}
+
+show(**user_dict)
+'''
+'''
+#xrange 只有进行迭代的时候才会创建,和xreadline相似
+print range(10)
+print xrange(10)
+
+for item in xrange(10):
+    print item
+
+'''
+'''
+#yield
+def foo():
+    yield 1
+    yield 2
+    yield 3
+    yield 4
+re = foo()
+print re
+#<generator object foo at 0x0000000003528120>
+
+for item in re:
+    print item
+'''
+
+'''
+f = open('D:/tmp.txt','r')
+f.read()
+f.close()
+#等于下面
+
+with open('D:/temp.txt','r') as f:
+    print 'xxx'
+'''
+
+def Readlines():
+    seek = 0
+    while True:
+        with open('D:temp.txt','r') as f:
+            f.seek(seek)
+            data = f.readline()
+            if data:
+                seek = f.tell()
+                yield data
+            else:
+                return
+
+for item in Readlines():
+    print item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

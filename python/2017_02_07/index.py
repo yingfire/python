@@ -140,6 +140,14 @@ for item in Readlines():
 '''
 #三元运算
 temp = None
+if 1>3:
+    temp = 'gt'
+else:
+    temp = 'lt'
+
+result = 'gt' if 1>3 else 'lt'
+
+print result
 
 
 

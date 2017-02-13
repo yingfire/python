@@ -122,7 +122,7 @@ f.close()
 with open('D:/temp.txt','r') as f:
     print 'xxx'
 '''
-
+'''
 def Readlines():
     seek = 0
     while True:
@@ -137,7 +137,9 @@ def Readlines():
 
 for item in Readlines():
     print item
-
+'''
+#三元运算
+temp = None
 
 
 

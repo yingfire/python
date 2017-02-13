@@ -138,16 +138,42 @@ def Readlines():
 for item in Readlines():
     print item
 '''
+'''
 #三元运算
 temp = None
 if 1>3:
     temp = 'gt'
 else:
     temp = 'lt'
+print temp
 
 result = 'gt' if 1>3 else 'lt'
 
 print result
+'''
+'''
+#lambda表达式,匿名函数(当函数特别简单，不会被多次调用)
+def foo(x,y):
+    return x+y
+print foo(4,10)
+
+
+temp = lambda x,y:x+y
+print temp(4,10)
+
+[lambda x:x*2 for i in range(10)]
+'''
+#内置函数
+#help()
+#a = []
+#help(a)
+dir()
+vars()
+print dir()
+print vars()
+#['__builtins__', '__doc__', '__file__', '__name__', '__package__']
+#{'__builtins__': <module '__builtin__' (built-in)>, '__name__': '__main__', '__file__': '/project/python/python/2017_02_07/index.py', '__doc__': '\ndoc(__doc__)\n', '__package__': None}
+#type()
 
 
 

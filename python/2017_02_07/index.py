@@ -163,6 +163,7 @@ print temp(4,10)
 
 [lambda x:x*2 for i in range(10)]
 '''
+'''
 #内置函数
 #help()
 #a = []
@@ -174,7 +175,14 @@ print vars()
 #['__builtins__', '__doc__', '__file__', '__name__', '__package__']
 #{'__builtins__': <module '__builtin__' (built-in)>, '__name__': '__main__', '__file__': '/project/python/python/2017_02_07/index.py', '__doc__': '\ndoc(__doc__)\n', '__package__': None}
 #type()
+'''
+#生成一个带序列的清单
+li = ['手表','汽车','房']
+for item in li:
+    print item
 
+for item in enumerate(li,1):
+    print item
 
 
 
